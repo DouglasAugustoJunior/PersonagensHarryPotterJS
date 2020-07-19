@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Caderno para gravar personagens de Harry Potter">
+		<meta name="keywords" content="HP, Harry Potter, JavaScript">
+		<meta name="author" content="Douglas Augusto">
+		<title>Caderno de personagens</title>
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+
+	<body>
+
+		<div class="container">
+
+			<div class="row align-items-start">
+
+				<!-- Pegadas da esquerda -->
+				<div class="col-1">
+					<img src="img/pegadas-grandes.jpg" alt="Pegadas" class="img-responsive pull-right flip" />
+				</div>
+
+				<div class="col-10 align-self-center">
+
+					<!-- Imagem inicial -->
+					<div id="swear">
+
+						<!-- Faixa -->
+						<img id="swearimg" src="img/faixa-juramento.png" alt="I solemnly swear I am up to no good"
+							class="img-responsive" />
+						<p class="h1">Clique para começar...</p>
+
+					</div>
+
+					<!-- Div que aparece após clicar -->
+					<div class="hidden">
+
+						<!-- Input -->
+						<div class="input-group">
+							<input type="text" id="busca" class="form-control" placeholder="Buscar Personagem">
+							<span class="btn btn-outline-dark" id="btnBuscar">Buscar</span>
+							<button type="button" class="btn btn-primary" data-toggle="modal"
+								data-target="#modalCadastrar">Cadastrar</button>
+						</div>
+
+						<div id="padrao">
+							<!-- Tabela -->
+							<table class="table table-striped table-dark">
+								<thead>
+									<tr>
+										<th scope="col">Nome</th>
+										<th scope="col">Função</th>
+										<th scope="col">Casa</th>
+										<th scope="col">Escola</th>
+										<th scope="col">Espécie</th>
+										<th scope="col">Sangue</th>
+									</tr>
+								</thead>
+								<tbody id="tabela">
+								</tbody>
+							</table>
+
+							<!-- Paginação -->
+							<nav aria-label="Paginação">
+								<ul class="pagination pagination-sm justify-content-center" id="paginacao">
+								</ul>
+							</nav>
+
+						</div>
+
+						<!-- Tabela da pesquisa -->
+						<div id="pesquisa" class="invisivel">
+							<table class="table table-striped table-dark">
+								<thead>
+									<tr>
+										<th scope="col">Nome</th>
+										<th scope="col">Função</th>
+										<th scope="col">Casa</th>
+										<th scope="col">Escola</th>
+										<th scope="col">Espécie</th>
+										<th scope="col">Sangue</th>
+									</tr>
+								</thead>
+								<tbody id="tabela-pesquisa">
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+				</div>
+
+				<!-- Pegadas da direita -->
+				<div class="col-1">
+					<img src="img/pegadas-pequenas.png" alt="Pegadas" class="img-responsive" />
+				</div>
+
+				<!-- Pegadas Inferiores -->
+				<div class="col-12">
+					<img src="img/pegadas-pequenas.png" alt="Pegadas" class="img-responsive float-left rotate180" />
+					<img src="img/pegadas-pequenas.png" alt="Pegadas" class="img-responsive float-right rotate90" />
+				</div>
+
+			</div>
+
+		</div>
+
+		<!-- Modal Cadastrar -->
+		<div class="modal fade bd-example-modal-lg" id="modalCadastrar" tabindex="-1" role="dialog"
+			aria-labelledby="modalCadastrarLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="modalCadastrarLabel">Cadastrar personagem</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form id="formulario">
+							<div class="form-row">
+								<ul id="mensagens-erro" class="col-12"></ul>
+								<div class="form-group col-6">
+									<label for="nome" class="col-form-label">Nome:</label>
+									<input type="text" class="form-control" id="nome" required>
+								</div>
+
+								<div class="form-group col-6">
+									<label for="funcao" class="col-form-label">Função:</label>
+									<input type="text" class="form-control" id="funcao" required>
+								</div>
+
+								<div class="form-group col-6">
+									<label for="casa" class="col-form-label">Casa:</label>
+									<select class="custom-select" id="casa" required>
+										<option value="Gryffindor" selected>Grifinória</option>
+										<option value="Slytherin">Sonserina</option>
+										<option value="Ravenclaw">Corvinal</option>
+										<option value="Hufflepuff">Lufa-Lufa</option>
+										<option value=" ">Nenhuma</option>
+									</select>
+								</div>
+
+								<div class="form-group col-6">
+									<label for="escola" class="col-form-label">Escola:</label>
+									<input type="text" class="form-control" id="escola" required>
+								</div>
+
+								<div class="form-group col-6">
+									<label for="especie" class="col-form-label">Espécie:</label>
+									<input type="text" class="form-control" id="especie" required>
+								</div>
+
+								<div class="form-group col-6">
+									<label for="sangue" class="col-form-label">Sangue Status:</label>
+									<input type="text" class="form-control" id="sangue" required>
+								</div>
+
+							</div>
+
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" id="fechar"
+									data-dismiss="modal">Fechar</button>
+								<button type="submit" class="btn btn-success" id="cadastrar">Cadastrar</button>
+							</div>
+
+						</form>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+			integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+			crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+			integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+			crossorigin="anonymous"></script>
+
+		<script src="js/index.js"></script>
+		<script src="js/form.js"></script>
+		<script src="js/filtra.js"></script>
+
+	</body>
+
+</html>

@@ -1,0 +1,64 @@
+body {
+    background-color: #ece3a2; /* Fundo da cor da imagem */
+    background-image:url('../img/background.jpg'); /* Fundo */
+    font-family: 'IM Fell DW Pica SC', serif; /* Fonte */
+}
+
+input, span { /* Inputs e Span transparentes */
+    background-color:transparent !important;
+}
+
+a:link { /* Remove aparência de link */
+    text-decoration: none;
+}
+
+table {
+    opacity: 0.94;
+}
+
+.flip { /* Efeito de transição */
+-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+.input-group { /* Div de busca */
+    padding:7% 10%;
+    background-size: 100%;
+    background-image:url("../img/faixa-vazia.png");/* Faixa do Input */
+    background-repeat: no-repeat;
+}
+
+.hidden { /* Esconde o elemento */
+    visibility: hidden;
+}
+
+#swear { /* Div que some */
+    margin-left:20%;
+}
+
+.img-responsive { /* Para imagens laterais */
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.rotate180 { /* Gira o elemento 180° */
+    transform: rotate(180deg);
+}
+
+.rotate90 { /* Gira o elemento 90° */
+    transform: rotate(90deg);
+}
+
+.icone { /* Ícones das casas */
+    width: 40px;
+    height: 40px;
+}
+
+.invisivel {
+	display: none;
+}
