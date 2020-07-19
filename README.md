@@ -10,6 +10,7 @@
 
 Projeto utilizado para praticar alguns conceitos da linguagem Javascript.
 O mesmo utiliza a [Harry Potter API](https://www.potterapi.com/) para exibir os dados.
+[Github Pages](https://douglasaugustojunior.github.io/PersonagensHarryPotterJS/)
 
 <img src="https://raw.githubusercontent.com/DouglasAugustoJunior/PersonagensHarryPotterJS/master/images/Screenshot_1.png" alt="Header">
 
