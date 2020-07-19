@@ -1,5 +1,5 @@
 var pagina = document.querySelector("#paginacao") // Pega o a pagina no HTML para atualizar
-const animateFootprints = "img/pegadas-gif.gif" // GIF que aparece ao clicar na imagem
+const animateFootprints = "images/pegadas-gif.gif" // GIF que aparece ao clicar na imagem
 const url = 'https://www.potterapi.com/v1/characters?key=$2a$10$QqUiCuF1E7WOBL5e4VS3Ku0xO0QEYvpLkpfI3W8.nA7yPLlsX.WsO' // Link da API
 var personagens // Lista de personagens
 var totalPaginas // Total das páginas

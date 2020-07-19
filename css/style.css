@@ -1,6 +1,6 @@
 body {
     background-color: #ece3a2; /* Fundo da cor da imagem */
-    background-image:url('../img/background.jpg'); /* Fundo */
+    background-image:url('../images/background.jpg'); /* Fundo */
     font-family: 'IM Fell DW Pica SC', serif; /* Fonte */
 }
 
@@ -28,7 +28,7 @@ table {
 .input-group { /* Div de busca */
     padding:7% 10%;
     background-size: 100%;
-    background-image:url("../img/faixa-vazia.png");/* Faixa do Input */
+    background-image:url("../images/faixa-vazia.png");/* Faixa do Input */
     background-repeat: no-repeat;
 }
 

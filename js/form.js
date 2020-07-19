@@ -98,7 +98,7 @@ function exibeMensagensDeErro(erros) { // Exibe as mensagens de erro
 function montaIcone(icone) { // Exibe imagens dos ícones
     var td = document.createElement("td")
     var img = document.createElement("img")
-    img.src = `img/${icone}.png`
+    img.src = `images/${icone}.png`
     img.classList.add('icone')
 
     td.appendChild(img)
